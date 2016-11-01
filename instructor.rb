@@ -1,13 +1,12 @@
-class Instructor
+require "./person"
+class Instructor < Person
 
-  attr_accessor :first_name, :last_name, :nick_name, :age, :strength
+  attr_accessor :nick_name, :strength
 
   def initialize(params={})
+    super
     #variables de instancia
-    @first_name = params[:first_name] ? params[:first_name] : "N/A"
-    @last_name = params[:last_name] ? params[:last_name] : "N/A"
     @nick_name = params[:nick_name] ? params[:nick_name] : "N/A"
-    @age = params[:age] ? params[:age] : 1000
     @strength = params[:strength] ? params[:strength] : "N/A"
   end
 
